@@ -23,7 +23,7 @@ process PREPARE_VCF {
     tabix -p vcf "$vcf"
     fi
     # Create GT-only uncompressed VCF for STAR
-    bcftools annotate -x INFO,^FORMAT/GT -Ov -o "${meta.id}.GTonly.vcf" "$vcf"
+    bcftools view -f PASS "$vcf" | bcftools annotate -x INFO,^FORMAT/GT -Ov -o "${meta.id}.GTonly.vcf"
 
     # Create PASS-filtered compressed and indexed VCF for Beagle
     bcftools view -r $chromosome -f PASS -Oz -o "${meta.id}.filtered.vcf.gz" "$vcf"

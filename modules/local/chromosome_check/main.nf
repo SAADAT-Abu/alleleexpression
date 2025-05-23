@@ -8,7 +8,8 @@ process CHROMOSOME_CHECK {
         'quay.io/biocontainers/bcftools:1.15.1--h0ea216a_0' }"
 
     input:
-    tuple val(meta), path(vcf), path(tbi)
+    // Using a more flexible approach to handle the input structure
+    val inputs
     path beagle_ref
     path beagle_map
     val chromosome
@@ -18,6 +19,8 @@ process CHROMOSOME_CHECK {
     path "versions.yml", emit: versions
 
     script:
+    def meta = inputs[0]
+    def vcf = inputs[1]
     """
     # Check chromosome naming in VCF
     VCF_CHR=\$(bcftools view -h $vcf | grep -v "^##" | head -n1 | cut -f1)

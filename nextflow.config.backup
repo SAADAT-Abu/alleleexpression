@@ -144,7 +144,6 @@ def check_max(obj, type) {
     }
 }
 
-
 profiles {
     docker {
         docker.enabled = true
@@ -169,7 +168,7 @@ profiles {
 }
 
 process {
-  withName: 'BCFTOOLS_VIEW' {
-    ext.args = "-r ${params.chromosome} -f PASS -Oz"
+  withName: 'CHROMOSOME_CHECK' {
+    enabled = false
   }
 }

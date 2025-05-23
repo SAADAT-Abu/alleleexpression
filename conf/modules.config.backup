@@ -29,16 +29,30 @@ process {
         ]
     }
 
-    withName: STAR_ALIGN_WASP {
+    withName: STAR_ALIGN {
+        ext.args = [
+            '--outSAMtype BAM SortedByCoordinate',
+            '--outSAMattributes NH HI AS nM NM MD jM jI rB MC vA vG vW',
+            '--alignEndsType EndToEnd',
+            '--outSAMunmapped Within',
+            '--outFilterMultimapNmax 1',
+            '--waspOutputMode SAMtag'
+        ].join(' ')
         publishDir = [
             path: { "${params.outdir}/star" },
             mode: params.publish_dir_mode,
             saveAs: { filename -> filename.equals('versions.yml') ? null : filename }
         ]
-    cpus = 8
-    memory = '12 GB'
     }
 
+    withName: FILTER_WASP_READS {
+        ext.args = "-h | awk 'BEGIN{FS=\"\\t\"; OFS=\"\\t\"} /^@/ || \$0 !~ /vW:i:1/' | samtools view -b"
+        publishDir = [
+            path: { "${params.outdir}/wasp" },
+            mode: params.publish_dir_mode,
+            saveAs: { filename -> filename.equals('versions.yml') ? null : filename }
+        ]
+    }
 
     withName: UMITOOLS_DEDUP {
         ext.args = "--extract-umi-method=read_id --umi-separator=\"${params.umi_separator}\""
