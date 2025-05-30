@@ -81,3 +81,10 @@ The pipeline organizes outputs by sample name in the specified output directory:
 - Author: Abu Saadat
 - Pipeline framework: nf-core
 - Tools: STAR, UMI-tools, samtools, bcftools, Beagle, phaser
+
+## Contributing
+
+ASENext is under active development and we welcome contributions!
+If you find a bug, have an idea to improve it, or want to help implement new features (like better sex-chromosome support), feel free to open an issue or submit a pull request.
+
+Let’s build this together.
