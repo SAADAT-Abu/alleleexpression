@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	03/29ea61	3182990	ASENEXT:INPUT_CHECK (samplesheet.csv)	FAILED	1	2025-06-25 11:02:11.306	29ms	25ms	-	-	-	-	-

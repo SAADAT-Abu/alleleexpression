@@ -49,23 +49,31 @@ process STAR_ALIGN_WASP {
     def seq_platform_arg  = seq_platform ? "'PL:$seq_platform'" : ""
     def seq_center_arg    = seq_center ? "'CN:$seq_center'" : ""
     attrRG          = args.contains("--outSAMattrRGline") ? "" : "--outSAMattrRGline 'ID:$prefix' $seq_center_arg 'SM:$prefix' $seq_platform_arg"
-    
+
     // Always use BAM SortedByCoordinate for WASP mode
     def out_sam_type = '--outSAMtype BAM SortedByCoordinate'
-    
+
     // Explicitly add WASP mode parameters
     def wasp_params = "--outSAMattributes NH HI AS nM NM MD jM jI rB MC vA vG vW --alignEndsType EndToEnd --outSAMunmapped Within --outFilterMultimapNmax 1 --waspOutputMode SAMtag --varVCFfile $vcf"
-    
+
+    // CRITICAL FIX: Add readFilesCommand for compressed FASTQ files
+    def read_files_cmd = ""
+    if (reads1.any { it.toString().endsWith('.gz') } || reads2.any { it.toString().endsWith('.gz') }) {
+        read_files_cmd = "--readFilesCommand zcat"
+    }
+
     """
     STAR \\
         --genomeDir $index \\
         --readFilesIn ${reads1.join(",")} ${reads2.join(",")} \\
-        --runThreadN $task.cpus/2 \\
+        $read_files_cmd \\
+        --runThreadN $task.cpus \\
         --outFileNamePrefix $prefix. \\
         $out_sam_type \\
         $ignore_gtf \\
         $attrRG \\
-        $wasp_params
+        $wasp_params \\
+        $args
 
     if [ -f ${prefix}.Unmapped.out.mate1 ]; then
         mv ${prefix}.Unmapped.out.mate1 ${prefix}.unmapped_1.fastq
@@ -96,7 +104,7 @@ process STAR_ALIGN_WASP {
     touch ${prefix}.sortedByCoord.out.bam
     touch ${prefix}.toTranscriptome.out.bam
     touch ${prefix}.Aligned.unsort.out.bam
-    touch ${prefix}.Aligned.sortedByCoord.out.bam
+    touch ${prefix}.Aligned.sortedByCoordinate.out.bam
     touch ${prefix}.tab
     touch ${prefix}.SJ.out.tab
     touch ${prefix}.ReadsPerGene.out.tab

@@ -1,2 +1,2 @@
 sample,fastq_1,fastq_2,vcf
-test_sample,test_data/test_R1.fastq.gz,test_data/test_R2.fastq.gz,test_data/test.vcf.gz
+Sample_1,tests/test_data/fastq/sample1_R1.fastq.gz,tests/test_data/fastq/sample1_R2.fastq.gz,tests/test_data/variants/sample1.vcf.gz
