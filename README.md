@@ -78,7 +78,6 @@ The pipeline organizes outputs by sample name in the specified output directory:
 - `multiqc/`: MultiQC report
 
 ## Credits
-- Author: Abu Saadat
 - Pipeline framework: nf-core
 - Tools: STAR, UMI-tools, samtools, bcftools, Beagle, phaser
 
