@@ -1,4 +1,0 @@
-task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
-1	44/48bcd9	3188670	ASENEXT:INPUT_CHECK (samplesheet.csv)	COMPLETED	0	2025-06-25 11:15:18.394	66ms	29ms	85.7%	3.3 MB	225.7 MB	823 KB	717 B
-3	99/81035f	3188801	ASENEXT:FASTQC (Sample_1)	FAILED	125	2025-06-25 11:15:18.525	2.7s	2.6s	-	-	-	-	-
-2	0a/56ab93	3188781	ASENEXT:PREPARE_VCF (Sample_1)	COMPLETED	0	2025-06-25 11:15:18.516	15.4s	0ms	653.3%	5.6 MB	11.3 MB	158.9 KB	8.2 KB

@@ -2,10 +2,9 @@ process PHASER_GENE_AE {
     tag "$meta.id"
     label 'process_low'
 
-    conda "bioconda::phaser=1.1.1"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/phaser:1.1.1--py37h516909a_0' :
-        'quay.io/biocontainers/phaser:1.1.1--py37h516909a_0' }"
+    'https://zenodo.org/records/15772979/files/phASER.sif?download=1' :
+    'phaser:latest' }"
 
     input:
     tuple val(meta), path(counts)
