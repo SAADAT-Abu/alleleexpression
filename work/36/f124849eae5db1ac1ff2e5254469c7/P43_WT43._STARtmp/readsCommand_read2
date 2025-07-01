@@ -1,3 +1,0 @@
-exec > "P43_WT43._STARtmp/tmp.fifo.read2"
-echo FILE 0
-zcat      "input2/86500_ID2508_19-WT43T_S1_L001_R2_001.fastq.gz"

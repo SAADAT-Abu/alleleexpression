@@ -1,2 +1,0 @@
-2025-07-01 11:43:29	1m 17s	backstabbing_wescoff	ERR	abd90af03f91ccd5db596994c8d188e5	cddb2b08-f189-42b9-91fc-2c8127712fcb	nextflow run main.nf -c tests/test.config -profile singularity -resume --multiqc_title ASE_test
-2025-07-01 11:50:39	1m 36s	tender_fermat	ERR	abd90af03f91ccd5db596994c8d188e5	cddb2b08-f189-42b9-91fc-2c8127712fcb	nextflow run main.nf -c tests/test.config -profile singularity -resume --multiqc_title ASE_test

@@ -1,3 +1,0 @@
-"ASENEXT:PREPARE_VCF":
-    bcftools: 1.15.1
-    tabix: (htslib)

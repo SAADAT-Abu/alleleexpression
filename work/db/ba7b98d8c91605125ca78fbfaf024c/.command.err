@@ -1,5 +1,0 @@
-
-EXITING: FATAL INPUT ERROR: duplicate parameter "readFilesCommand" in input "Command-Line"
-SOLUTION: keep only one definition of input parameters in each input source
-
-Jul 01 11:43:36 ...... FATAL ERROR, exiting
