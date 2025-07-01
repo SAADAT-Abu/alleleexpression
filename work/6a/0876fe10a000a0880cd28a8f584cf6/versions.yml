@@ -1,0 +1,3 @@
+"ASENEXT:BCFTOOLS_VIEW":
+    bcftools: 1.15.1
+    tabix: (htslib)

@@ -1,0 +1,309 @@
+Jul-01 11:43:28.903 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -c tests/test.config -profile singularity -resume --multiqc_title ASE_test
+Jul-01 11:43:28.968 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.2
+Jul-01 11:43:28.989 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/saadat/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.2,nf-wave@1.12.1
+Jul-01 11:43:29.007 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-01 11:43:29.008 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-01 11:43:29.010 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-01 11:43:29.017 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-01 11:43:29.032 [main] DEBUG nextflow.config.ConfigBuilder - Found config home: /home/saadat/.nextflow/config
+Jul-01 11:43:29.033 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /run/media/saadat/A/pipeline/ASENext/nextflow.config
+Jul-01 11:43:29.036 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /run/media/saadat/A/pipeline/ASENext/tests/test.config
+Jul-01 11:43:29.037 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/saadat/.nextflow/config
+Jul-01 11:43:29.037 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /run/media/saadat/A/pipeline/ASENext/nextflow.config
+Jul-01 11:43:29.037 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /run/media/saadat/A/pipeline/ASENext/tests/test.config
+Jul-01 11:43:29.058 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/saadat/.nextflow/secrets/store.json
+Jul-01 11:43:29.061 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4650a407] - activable => nextflow.secret.LocalSecretsProvider@4650a407
+Jul-01 11:43:29.071 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Jul-01 11:43:29.403 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Jul-01 11:43:29.821 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Jul-01 11:43:29.855 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [conda, singularity, docker]
+Jul-01 11:43:29.860 [main] WARN  nextflow.config.ConfigBuilder - It appears you have never run this project before -- Option `-resume` is ignored
+Jul-01 11:43:29.891 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jul-01 11:43:29.905 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [backstabbing_wescoff] DSL2 - revision: abd90af03f
+Jul-01 11:43:29.906 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-01 11:43:29.906 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-01 11:43:29.950 [main] DEBUG nextflow.Session - Session UUID: cddb2b08-f189-42b9-91fc-2c8127712fcb
+Jul-01 11:43:29.950 [main] DEBUG nextflow.Session - Run name: backstabbing_wescoff
+Jul-01 11:43:29.950 [main] DEBUG nextflow.Session - Executor pool size: 16
+Jul-01 11:43:29.958 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-01 11:43:29.963 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-01 11:43:29.987 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.2 build 5947
+  Created: 13-05-2025 21:58 UTC (23:58 CEST)
+  System: Linux 6.14.6-200.fc41.x86_64
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.7+6
+  Encoding: UTF-8 (UTF-8)
+  Process: 3121429@fedora [10.1.17.20]
+  CPUs: 16 - Mem: 62.6 GB (21.7 GB) - Swap: 8 GB (7.9 GB)
+Jul-01 11:43:30.011 [main] DEBUG nextflow.Session - Work-dir: /run/media/saadat/A/pipeline/ASENext/work [ext2/ext3]
+Jul-01 11:43:30.034 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-01 11:43:30.042 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-01 11:43:30.061 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-01 11:43:30.086 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-01 11:43:30.094 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Jul-01 11:43:30.371 [main] DEBUG nextflow.Session - Session start
+Jul-01 11:43:30.383 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /run/media/saadat/A/pipeline/ASENext/results/pipeline_info/execution_trace_2025-07-01_11-43-29.txt
+Jul-01 11:43:30.404 [main] DEBUG nextflow.Session - Using default localLib path: /run/media/saadat/A/pipeline/ASENext/lib
+Jul-01 11:43:30.409 [main] DEBUG nextflow.Session - Adding to the classpath library: /run/media/saadat/A/pipeline/ASENext/lib
+Jul-01 11:43:30.536 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-01 11:43:30.545 [main] INFO  nextflow.Nextflow - ASENext pipeline parameters:
+Jul-01 11:43:30.546 [main] INFO  nextflow.Nextflow -   --genomes=[hg38:[ensembl_gtf:/run/media/saadat/A/VEP/References/Refgenie/alias/hg38/ensembl_gtf/default/hg38.gtf.gz, fasta:/run/media/saadat/A/VEP/References/Refgenie/alias/hg38/fasta/default/hg38.fa]]
+Jul-01 11:43:30.546 [main] INFO  nextflow.Nextflow -   --input=/run/media/saadat/A/WT_AS/samplesheet.csv
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --outdir=/run/media/saadat/A/WT_AS/nf-test
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --chromosome=chr11
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --genome=null
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --fasta=/run/media/saadat/A/VEP/References/Gencode/GRCh38.primary_assembly.genome.fa
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --gtf=/run/media/saadat/A/VEP/References/Gencode/gencode.v47.primary_assembly.annotation.gtf
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --star_index=/run/media/saadat/A/VEP/References/Gencode/STAR_index
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --gene_features=/run/media/saadat/A/VEP/References/Gencode/gencode.v47.gene.bed
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --beagle_ref=/run/media/saadat/A/WT_AS/Beagle/GRCh38_MAP/VCF/ALL.chr11.GRCh38.phased.chrprefix.vcf.gz
+Jul-01 11:43:30.547 [main] INFO  nextflow.Nextflow -   --beagle_map=/run/media/saadat/A/WT_AS/Beagle/GRCh38_MAP/plink.GRCh38.map/plink.chr11.GRCh38_chrprefix.map
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --umi_separator=:
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --max_memory=30.GB
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --max_cpus=10
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --max_time=18.h
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --publish_dir_mode=copy
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --email=null
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --email_on_fail=null
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --plaintext_email=false
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --monochrome_logs=false
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --help=false
+Jul-01 11:43:30.548 [main] INFO  nextflow.Nextflow -   --multiqc_title=ASE_test
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --tracedir=./results/pipeline_info
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --custom_config_version=master
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --custom_config_base=https://raw.githubusercontent.com/nf-core/configs/master
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --config_profile_description=null
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --config_profile_contact=null
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --config_profile_url=null
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --validate_params=true
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --show_hidden_params=false
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --schema_ignore_params=genomes
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --igenomes_base=s3://ngi-igenomes/igenomes
+Jul-01 11:43:30.549 [main] INFO  nextflow.Nextflow -   --igenomes_ignore=true
+Jul-01 11:43:30.550 [main] INFO  nextflow.Nextflow -   --multiqc_config=null
+Jul-01 11:43:30.550 [main] INFO  nextflow.Nextflow -   --max_multiqc_email_size=25.MB
+Jul-01 11:43:30.550 [main] INFO  nextflow.Nextflow -   --container=nfcore/wasp:latest
+Jul-01 11:43:31.640 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMPLESHEET_CHECK` matches process ASENEXT:SAMPLESHEET_CHECK
+Jul-01 11:43:31.650 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.650 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.655 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-01 11:43:31.660 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=62.6 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Jul-01 11:43:31.662 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-01 11:43:31.677 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:SAMPLESHEET_CHECK': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.740 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASENEXT:FASTQC
+Jul-01 11:43:31.741 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTQC` matches process ASENEXT:FASTQC
+Jul-01 11:43:31.747 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.747 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.748 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:FASTQC': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.756 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASENEXT:PREPARE_VCF
+Jul-01 11:43:31.756 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PREPARE_VCF` matches process ASENEXT:PREPARE_VCF
+Jul-01 11:43:31.758 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.758 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.759 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:PREPARE_VCF': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.785 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASENEXT:STAR_ALIGN_WASP
+Jul-01 11:43:31.785 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STAR_ALIGN_WASP` matches process ASENEXT:STAR_ALIGN_WASP
+Jul-01 11:43:31.790 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.790 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.790 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:STAR_ALIGN_WASP': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.801 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASENEXT:FILTER_WASP_READS
+Jul-01 11:43:31.801 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FILTER_WASP_READS` matches process ASENEXT:FILTER_WASP_READS
+Jul-01 11:43:31.804 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.805 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.806 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:FILTER_WASP_READS': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.814 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASENEXT:SAMTOOLS_SORT
+Jul-01 11:43:31.814 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_SORT` matches process ASENEXT:SAMTOOLS_SORT
+Jul-01 11:43:31.816 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.816 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.817 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:SAMTOOLS_SORT': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.826 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASENEXT:SAMTOOLS_INDEX
+Jul-01 11:43:31.827 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_INDEX.*` matches process ASENEXT:SAMTOOLS_INDEX
+Jul-01 11:43:31.830 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.830 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.831 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:SAMTOOLS_INDEX': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.842 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASENEXT:UMITOOLS_DEDUP
+Jul-01 11:43:31.842 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:UMITOOLS_DEDUP` matches process ASENEXT:UMITOOLS_DEDUP
+Jul-01 11:43:31.845 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.845 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.845 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:UMITOOLS_DEDUP': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.852 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASENEXT:SAMTOOLS_INDEX_FINAL
+Jul-01 11:43:31.852 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_INDEX.*` matches process ASENEXT:SAMTOOLS_INDEX_FINAL
+Jul-01 11:43:31.853 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_INDEX.*` matches process ASENEXT:SAMTOOLS_INDEX_FINAL
+Jul-01 11:43:31.856 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.856 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.857 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:SAMTOOLS_INDEX_FINAL': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.866 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASENEXT:BCFTOOLS_VIEW
+Jul-01 11:43:31.867 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BCFTOOLS_VIEW` matches process ASENEXT:BCFTOOLS_VIEW
+Jul-01 11:43:31.869 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.869 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.869 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:BCFTOOLS_VIEW': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.887 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASENEXT:BEAGLE5_BEAGLE
+Jul-01 11:43:31.888 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BEAGLE5_BEAGLE` matches process ASENEXT:BEAGLE5_BEAGLE
+Jul-01 11:43:31.891 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.891 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.892 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:BEAGLE5_BEAGLE': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.899 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASENEXT:TABIX_INDEX
+Jul-01 11:43:31.901 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.901 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.902 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:TABIX_INDEX': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.911 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASENEXT:PHASER
+Jul-01 11:43:31.911 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PHASER` matches process ASENEXT:PHASER
+Jul-01 11:43:31.913 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.913 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.914 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:PHASER': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.920 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASENEXT:PHASER_GENE_AE
+Jul-01 11:43:31.921 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PHASER_GENE_AE` matches process ASENEXT:PHASER_GENE_AE
+Jul-01 11:43:31.922 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.923 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.923 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:PHASER_GENE_AE': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.928 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASENEXT:EXTRACT_ASE_GENES
+Jul-01 11:43:31.929 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:EXTRACT_ASE_GENES` matches process ASENEXT:EXTRACT_ASE_GENES
+Jul-01 11:43:31.930 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.930 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.931 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:EXTRACT_ASE_GENES': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.948 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC` matches process ASENEXT:MULTIQC
+Jul-01 11:43:31.950 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-01 11:43:31.950 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-01 11:43:31.951 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASENEXT:MULTIQC': maxForks=0; fair=false; array=0
+Jul-01 11:43:31.961 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, ASENEXT:UMITOOLS_DEDUP, ASENEXT:SAMPLESHEET_CHECK, ASENEXT:FASTQC, PREPARE_VCF, ASENEXT:PHASER_GENE_AE, MULTIQC, PHASER, EXTRACT_ASE_GENES, SAMTOOLS_SORT, BEAGLE5_BEAGLE, PHASER_GENE_AE, ASENEXT:SAMTOOLS_INDEX, ASENEXT:STAR_ALIGN_WASP, FILTER_WASP_READS, ASENEXT:PHASER, ASENEXT:FILTER_WASP_READS, ASENEXT:BCFTOOLS_VIEW, SAMPLESHEET_CHECK, CHROMOSOME_CHECK, SAMTOOLS_INDEX_FINAL, TABIX_INDEX, ASENEXT:SAMTOOLS_SORT, UMITOOLS_DEDUP, ASENEXT:EXTRACT_ASE_GENES, BCFTOOLS_VIEW, ASENEXT:SAMTOOLS_INDEX_FINAL, STAR_ALIGN_WASP, ASENEXT:MULTIQC, ASENEXT:PREPARE_VCF, SAMTOOLS_INDEX, ASENEXT:BEAGLE5_BEAGLE, ASENEXT:TABIX_INDEX
+Jul-01 11:43:31.971 [main] WARN  nextflow.Session - There's no process matching config selector: CUSTOM_DUMPSOFTWAREVERSIONS
+Jul-01 11:43:31.974 [main] DEBUG nextflow.Session - Igniting dataflow network (29)
+Jul-01 11:43:31.978 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:SAMPLESHEET_CHECK
+Jul-01 11:43:31.978 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:FASTQC
+Jul-01 11:43:31.978 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:PREPARE_VCF
+Jul-01 11:43:31.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:STAR_ALIGN_WASP
+Jul-01 11:43:31.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:FILTER_WASP_READS
+Jul-01 11:43:31.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:SAMTOOLS_SORT
+Jul-01 11:43:31.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:SAMTOOLS_INDEX
+Jul-01 11:43:31.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:UMITOOLS_DEDUP
+Jul-01 11:43:31.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:SAMTOOLS_INDEX_FINAL
+Jul-01 11:43:31.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:BCFTOOLS_VIEW
+Jul-01 11:43:31.987 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:BEAGLE5_BEAGLE
+Jul-01 11:43:31.987 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:TABIX_INDEX
+Jul-01 11:43:31.987 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:PHASER
+Jul-01 11:43:31.988 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:PHASER_GENE_AE
+Jul-01 11:43:31.988 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:EXTRACT_ASE_GENES
+Jul-01 11:43:31.988 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASENEXT:MULTIQC
+Jul-01 11:43:31.989 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_0688f9478ea30f1f: /run/media/saadat/A/pipeline/ASENext/modules/local/bcftools_view/main.nf
+  Script_59101990e865c327: /run/media/saadat/A/pipeline/ASENext/modules/nf-core/umitools/dedup/main.nf
+  Script_de6fd97b09df19b0: /run/media/saadat/A/pipeline/ASENext/modules/nf-core/multiqc/main.nf
+  Script_537e2a37f764650d: /run/media/saadat/A/pipeline/ASENext/modules/local/chromosome_check/main.nf
+  Script_55aa656d0fb56493: /run/media/saadat/A/pipeline/ASENext/modules/local/prepare_vcf/main.nf
+  Script_9e61b79b569950a4: /run/media/saadat/A/pipeline/ASENext/modules/nf-core/fastqc/main.nf
+  Script_a23510288bd733dc: /run/media/saadat/A/pipeline/ASENext/modules/local/star_align_wasp/main.nf
+  Script_66cc580f20a6fe9b: /run/media/saadat/A/pipeline/ASENext/modules/local/phaser/main.nf
+  Script_de1c7c124fa4c7b4: /run/media/saadat/A/pipeline/ASENext/modules/nf-core/samtools/sort/main.nf
+  Script_9b99c0cca43c4d9f: /run/media/saadat/A/pipeline/ASENext/modules/local/filter_wasp_reads/main.nf
+  Script_71d372feb24d0670: /run/media/saadat/A/pipeline/ASENext/modules/local/tabix_index/main.nf
+  Script_31a8dc7d36908718: /run/media/saadat/A/pipeline/ASENext/main.nf
+  Script_3ff1656b1d66c1f2: /run/media/saadat/A/pipeline/ASENext/modules/nf-core/samtools/index/main.nf
+  Script_7b612986f47f607b: /run/media/saadat/A/pipeline/ASENext/modules/local/phaser_gene_ae/main.nf
+  Script_0ab6f97b743fb196: /run/media/saadat/A/pipeline/ASENext/modules/local/input_check/main.nf
+  Script_4492204a3ce667aa: /run/media/saadat/A/pipeline/ASENext/modules/local/beagle5_beagle/main.nf
+  Script_a2a124ace746686f: /run/media/saadat/A/pipeline/ASENext/workflows/asenext.nf
+  Script_0105973749243de9: /run/media/saadat/A/pipeline/ASENext/modules/local/extract_ase_genes/main/main.nf
+Jul-01 11:43:31.989 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-01 11:43:31.989 [main] DEBUG nextflow.Session - Session await
+Jul-01 11:43:32.076 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/python:3.8.3; path=/run/media/saadat/A/Sarek/cache/depot.galaxyproject.org-singularity-python-3.8.3.img
+Jul-01 11:43:32.194 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-01 11:43:32.196 [Task submitter] INFO  nextflow.Session - [9b/715797] Submitted process > ASENEXT:SAMPLESHEET_CHECK (samplesheet.csv)
+Jul-01 11:43:33.817 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: ASENEXT:SAMPLESHEET_CHECK (samplesheet.csv); status: COMPLETED; exit: 0; error: -; workDir: /run/media/saadat/A/pipeline/ASENext/work/9b/715797b082e3368761af132780f205]
+Jul-01 11:43:33.817 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-01 11:43:33.838 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-01 11:43:33.840 [Actor Thread 5] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/bcftools:1.15.1--h0ea216a_0; path=/run/media/saadat/A/Sarek/cache/depot.galaxyproject.org-singularity-bcftools-1.15.1--h0ea216a_0.img
+Jul-01 11:43:33.844 [Actor Thread 5] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/fastqc:0.12.1--hdfd78af_0; path=/run/media/saadat/A/Sarek/cache/depot.galaxyproject.org-singularity-fastqc-0.12.1--hdfd78af_0.img
+Jul-01 11:43:33.852 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-01 11:43:33.853 [Task submitter] INFO  nextflow.Session - [9d/cc327a] Submitted process > ASENEXT:PREPARE_VCF (P43_WT43)
+Jul-01 11:43:33.861 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-01 11:43:33.862 [Task submitter] INFO  nextflow.Session - [8e/0ce686] Submitted process > ASENEXT:FASTQC (P43_WT43)
+Jul-01 11:43:35.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: ASENEXT:PREPARE_VCF (P43_WT43); status: COMPLETED; exit: 0; error: -; workDir: /run/media/saadat/A/pipeline/ASENext/work/9d/cc327afe9290140ef777e8e515892e]
+Jul-01 11:43:35.980 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://community-cr-prod.seqera.io/docker/registry/v2/blobs/sha256/26/268b4c9c6cbf8fa6606c9b7fd4fafce18bf2c931d1a809a0ce51b105ec06c89d/data; path=/run/media/saadat/A/Sarek/cache/community-cr-prod.seqera.io-docker-registry-v2-blobs-sha256-26-268b4c9c6cbf8fa6606c9b7fd4fafce18bf2c931d1a809a0ce51b105ec06c89d-data.img
+Jul-01 11:43:35.986 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-01 11:43:35.987 [Task submitter] INFO  nextflow.Session - [6a/0876fe] Submitted process > ASENEXT:BCFTOOLS_VIEW (P43_WT43)
+Jul-01 11:43:36.325 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: ASENEXT:BCFTOOLS_VIEW (P43_WT43); status: COMPLETED; exit: 0; error: -; workDir: /run/media/saadat/A/pipeline/ASENext/work/6a/0876fe10a000a0880cd28a8f584cf6]
+Jul-01 11:43:36.333 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-01 11:43:36.334 [Task submitter] INFO  nextflow.Session - [db/ba7b98] Submitted process > ASENEXT:STAR_ALIGN_WASP (P43_WT43)
+Jul-01 11:43:36.335 [Actor Thread 5] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/beagle:5.2_21Apr21.304--hdfd78af_0; path=/run/media/saadat/A/Sarek/cache/depot.galaxyproject.org-singularity-beagle-5.2_21Apr21.304--hdfd78af_0.img
+Jul-01 11:43:36.818 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: ASENEXT:STAR_ALIGN_WASP (P43_WT43); status: COMPLETED; exit: 102; error: -; workDir: /run/media/saadat/A/pipeline/ASENext/work/db/ba7b98d8c91605125ca78fbfaf024c]
+Jul-01 11:43:36.822 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ASENEXT:STAR_ALIGN_WASP (P43_WT43); work-dir=/run/media/saadat/A/pipeline/ASENext/work/db/ba7b98d8c91605125ca78fbfaf024c
+  error [nextflow.exception.ProcessFailedException]: Process `ASENEXT:STAR_ALIGN_WASP (P43_WT43)` terminated with an error exit status (102)
+Jul-01 11:43:36.822 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-01 11:43:36.823 [Task submitter] INFO  nextflow.Session - [9e/e69b7e] Submitted process > ASENEXT:BEAGLE5_BEAGLE (P43_WT43)
+Jul-01 11:43:36.835 [TaskFinalizer-4] ERROR nextflow.processor.TaskProcessor - Error executing process > 'ASENEXT:STAR_ALIGN_WASP (P43_WT43)'
+
+Caused by:
+  Process `ASENEXT:STAR_ALIGN_WASP (P43_WT43)` terminated with an error exit status (102)
+
+
+Command executed:
+
+  STAR \
+      --genomeDir STAR_index \
+      --readFilesIn input1/86500_ID2508_19-WT43T_S1_L001_R1_001.fastq.gz input2/86500_ID2508_19-WT43T_S1_L001_R2_001.fastq.gz \
+      --readFilesCommand zcat \
+      --runThreadN 8 \
+      --outFileNamePrefix P43_WT43. \
+      --outSAMtype BAM SortedByCoordinate \
+      --sjdbGTFfile gencode.v47.primary_assembly.annotation.gtf \
+      --outSAMattrRGline 'ID:P43_WT43'  'SM:P43_WT43' 'PL:illumina' \
+      --outSAMattributes NH HI AS nM NM MD jM jI rB MC vA vG vW --alignEndsType EndToEnd --outSAMunmapped Within --outFilterMultimapNmax 1 --waspOutputMode SAMtag --varVCFfile P43_WT43.GTonly.vcf \
+      --readFilesCommand zcat --outSAMtype BAM SortedByCoordinate --outSAMattributes NH HI AS nM NM MD jM jI rB MC vA vG vW --alignEndsType EndToEnd --outSAMunmapped Within --outFilterMultimapNmax 1 --waspOutputMode SAMtag
+  
+  if [ -f P43_WT43.Unmapped.out.mate1 ]; then
+      mv P43_WT43.Unmapped.out.mate1 P43_WT43.unmapped_1.fastq
+      gzip P43_WT43.unmapped_1.fastq
+  fi
+  if [ -f P43_WT43.Unmapped.out.mate2 ]; then
+      mv P43_WT43.Unmapped.out.mate2 P43_WT43.unmapped_2.fastq
+      gzip P43_WT43.unmapped_2.fastq
+  fi
+  
+  cat <<-END_VERSIONS > versions.yml
+  "ASENEXT:STAR_ALIGN_WASP":
+      star: $(STAR --version | sed -e "s/STAR_//g")
+      samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')
+      gawk: $(echo $(gawk --version 2>&1) | sed 's/^.*GNU Awk //; s/, .*$//')
+  END_VERSIONS
+
+Command exit status:
+  102
+
+Command output:
+  (empty)
+
+Command error:
+  
+  EXITING: FATAL INPUT ERROR: duplicate parameter "readFilesCommand" in input "Command-Line"
+  SOLUTION: keep only one definition of input parameters in each input source
+  
+  Jul 01 11:43:36 ...... FATAL ERROR, exiting
+
+Work dir:
+  /run/media/saadat/A/pipeline/ASENext/work/db/ba7b98d8c91605125ca78fbfaf024c
+
+Container:
+  /run/media/saadat/A/Sarek/cache/community-cr-prod.seqera.io-docker-registry-v2-blobs-sha256-26-268b4c9c6cbf8fa6606c9b7fd4fafce18bf2c931d1a809a0ce51b105ec06c89d-data.img
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Jul-01 11:43:36.838 [TaskFinalizer-4] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Jul-01 11:43:36.843 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-01 11:44:44.891 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Jul-01 11:44:44.905 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-01 11:44:44.905 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-01 11:44:44.908 [main] INFO  nextflow.Nextflow - Pipeline completed at: 2025-07-01T11:44:44.907235228+02:00
+Jul-01 11:44:44.908 [main] INFO  nextflow.Nextflow - Execution status: failed
+Jul-01 11:44:44.908 [main] INFO  nextflow.Nextflow - Execution duration: 1m 15s
+Jul-01 11:44:44.910 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (2)
+Jul-01 11:44:44.915 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill ASENEXT:FASTQC (P43_WT43) -- command: kill -TERM 3121784; exit: 1 
+ bash: line 1: kill: (3121784) - No such process
+
+Jul-01 11:44:44.918 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill ASENEXT:BEAGLE5_BEAGLE (P43_WT43) -- command: kill -TERM 3122750; exit: 1 
+ bash: line 1: kill: (3122750) - No such process
+
+Jul-01 11:44:44.920 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=2; succeedDuration=2s; failedDuration=3.2s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=14; peakMemory=24 GB; ]
+Jul-01 11:44:44.920 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jul-01 11:44:44.921 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jul-01 11:44:45.477 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jul-01 11:44:45.588 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-01 11:44:45.598 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

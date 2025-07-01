@@ -1,0 +1,17 @@
+nextflow.trace/v2
+realtime=0
+%cpu=6938
+cpu_model=Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+rchar=641960
+wchar=182459
+syscr=331
+syscw=37
+read_bytes=3429376
+write_bytes=188416
+%mem=0
+vmem=14800
+rss=3876
+peak_vmem=14804
+peak_rss=3876
+vol_ctxt=42
+inv_ctxt=0

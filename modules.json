@@ -1,0 +1,70 @@
+{
+  "name": "ASENext",
+  "homePage": "https://github.com/SAADAT-Abu/ASENext",
+  "repos": {
+    "https://github.com/nf-core/modules.git": {
+      "modules": {
+        "nf-core": {
+          "bcftools/annotate": {
+            "branch": "master",
+            "git_sha": "ccd4eb28eb1fffb9739b37c480efd6d76dfb5908",
+            "installed_by": ["modules"]
+          },
+          "bcftools/index": {
+            "branch": "master",
+            "git_sha": "c9c3ef86c1892413b3c86fb38c4e39fd7288512f",
+            "installed_by": ["modules"]
+          },
+          "bcftools/view": {
+            "branch": "master",
+            "git_sha": "682f789f93070bd047868300dd018faf3d434e7c",
+            "installed_by": ["modules"]
+          },
+          "beagle5/beagle": {
+            "branch": "master",
+            "git_sha": "81880787133db07d9b4c1febd152c090eb8325dc",
+            "installed_by": ["modules"]
+          },
+          "fastqc": {
+            "branch": "master",
+            "git_sha": "b1966f36ec9de31927b2603d8f499960b2a4c294",
+            "installed_by": ["modules"]
+          },
+          "multiqc": {
+            "branch": "master",
+            "git_sha": "7b50cb7be890e4b28cffb82e438cc6a8d7805d3f",
+            "installed_by": ["modules"]
+          },
+          "samtools/index": {
+            "branch": "master",
+            "git_sha": "05954dab2ff481bcb999f24455da29a5828af08d",
+            "installed_by": ["modules"]
+          },
+          "samtools/sort": {
+            "branch": "master",
+            "git_sha": "05954dab2ff481bcb999f24455da29a5828af08d",
+            "installed_by": ["modules"]
+          },
+          "samtools/view": {
+            "branch": "master",
+            "git_sha": "05954dab2ff481bcb999f24455da29a5828af08d",
+            "installed_by": ["modules"]
+          },
+          "star/align": {
+            "branch": "master",
+            "git_sha": "05954dab2ff481bcb999f24455da29a5828af08d",
+            "installed_by": ["modules"]
+          },
+          "umitools/dedup": {
+            "branch": "master",
+            "git_sha": "05954dab2ff481bcb999f24455da29a5828af08d",
+            "installed_by": ["modules"]
+          }
+        }
+      },
+      "subworkflows": {
+        "nf-core": {}
+      }
+    }
+  }
+}

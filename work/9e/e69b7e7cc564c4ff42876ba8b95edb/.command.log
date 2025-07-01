@@ -1,0 +1,86 @@
+beagle.21Apr21.304.jar (version 5.2)
+Copyright (C) 2014-2021 Brian L. Browning
+Enter "java -jar beagle.21Apr21.304.jar" to list command line argument
+Start time: 09:43 AM GMT on 01 Jul 2025
+
+Command line: java -Xmx1024m -jar beagle.21Apr21.304.jar
+  gt=P43_WT43.vcf.gz
+  out=P43_WT43_beagle
+  ref=ALL.chr11.GRCh38.phased.chrprefix.vcf.gz
+  map=plink.chr11.GRCh38_chrprefix.map
+  nthreads=2
+
+Reference samples:                2,548
+Study     samples:                    1
+
+Window 1 [chr11:72980-22514946]
+Reference markers:              676,515
+Study     markers:                1,902
+
+Burnin  iteration 1:           0 seconds
+
+Burnin  iteration 2:           0 seconds
+
+Burnin  iteration 3:           0 seconds
+
+Phasing iteration 1:           0 seconds
+
+Phasing iteration 2:           0 seconds
+
+Phasing iteration 3:           0 seconds
+
+Phasing iteration 4:           0 seconds
+
+Phasing iteration 5:           0 seconds
+
+Phasing iteration 6:           0 seconds
+
+Phasing iteration 7:           0 seconds
+
+Phasing iteration 8:           0 seconds
+
+Phasing iteration 9:           0 seconds
+
+Phasing iteration 10:          0 seconds
+
+Phasing iteration 11:          0 seconds
+
+Phasing iteration 12:          0 seconds
+
+Imputation time:               2 seconds
+
+Window 2 [chr11:21328611-71093617]
+Reference markers:            1,364,402
+Study     markers:                2,462
+
+Burnin  iteration 1:           0 seconds
+
+Burnin  iteration 2:           0 seconds
+
+Burnin  iteration 3:           0 seconds
+
+Phasing iteration 1:           0 seconds
+
+Phasing iteration 2:           0 seconds
+
+Phasing iteration 3:           0 seconds
+
+Phasing iteration 4:           0 seconds
+
+Phasing iteration 5:           0 seconds
+
+Phasing iteration 6:           0 seconds
+
+Phasing iteration 7:           0 seconds
+
+Phasing iteration 8:           0 seconds
+
+Phasing iteration 9:           0 seconds
+
+Phasing iteration 10:          0 seconds
+
+Phasing iteration 11:          0 seconds
+
+Phasing iteration 12:          0 seconds
+
+Imputation time:               4 seconds

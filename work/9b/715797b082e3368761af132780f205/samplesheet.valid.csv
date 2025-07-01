@@ -1,0 +1,2 @@
+sample,fastq_1,fastq_2,vcf
+P43_WT43,/run/media/saadat/D/WT_RNA_22Aug/delivery_20220812/raw_reads/86500_ID2508_19-WT43T_S1_L001_R1_001.fastq.gz,/run/media/saadat/D/WT_RNA_22Aug/delivery_20220812/raw_reads/86500_ID2508_19-WT43T_S1_L001_R2_001.fastq.gz,/run/media/saadat/A/WT_WES_Analysis/DeepVar/WT/WT43.deepvariant.vcf.gz
