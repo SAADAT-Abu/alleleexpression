@@ -4,7 +4,6 @@ nf_core_version: "2.14.1"
 lint:
   files_exist:
     - CODE_OF_CONDUCT.md
-  files_unchanged: []
   actions_awsfulltest: false
   actions_awstest: false
   pipeline_todos: false
