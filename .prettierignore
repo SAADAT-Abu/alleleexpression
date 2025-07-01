@@ -1,12 +1,13 @@
-# Template files with Groovy syntax
-assets/email_template.html
-assets/slackreport.json
-assets/adaptivecard.json
-**/*.nf.test
-*.nf
-nextflow.config
-*.config
-docs/
-README.md
-.github/workflows/
+email_template.html
+adaptivecard.json
+slackreport.json
+.nextflow*
+work/
+data/
+results/
+.DS_Store
+testing/
+testing*
+*.pyc
+bin/
 ro-crate-metadata.json
