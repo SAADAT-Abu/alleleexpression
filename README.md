@@ -1,7 +1,7 @@
-# ASENext
+# nf-core Alleleexpression
 
 ## Overview
-ASENext is a Nextflow pipeline for allele-specific expression (ASE) analysis using STAR-WASP for alignment, UMI-tools for deduplication, and phaser for haplotype phasing and ASE detection.
+Alleleexpression is a Nextflow pipeline for allele-specific expression (ASE) analysis using STAR-WASP for alignment, UMI-tools for deduplication, and phaser for haplotype phasing and ASE detection.
 
 ## Features
 - STAR alignment with WASP mode for allele-specific mapping
@@ -21,7 +21,7 @@ ASENext is a Nextflow pipeline for allele-specific expression (ASE) analysis usi
 
 ### Basic usage
 ```bash
-nextflow run ASENext --input samples.csv --outdir results --chromosome chr11
+nextflow run alleleexpression --input samples.csv --outdir results --chromosome chr11
 ```
 
 ### Input format
@@ -83,7 +83,7 @@ The pipeline organizes outputs by sample name in the specified output directory:
 
 ## Contributing
 
-ASENext is under active development and we welcome contributions!
+Alleleexpression is under active development and we welcome contributions!
 If you find a bug, have an idea to improve it, or want to help implement new features (like better sex-chromosome support), feel free to open an issue or submit a pull request.
 
 Let’s build this together.
