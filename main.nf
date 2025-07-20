@@ -2,9 +2,9 @@
 
 /*
 ========================================================================================
-    ASENext
+    nf-core Alleleexpression
 ========================================================================================
-    Github : https://github.com/abusaadat/ASENext
+    Github : https://github.com/SAADAT-Abu/alleleexpression
     Author : Abu Saadat
 ----------------------------------------------------------------------------------------
 */
@@ -18,7 +18,7 @@ nextflow.enable.dsl = 2
 */
 
 // Print parameter summary
-log.info "ASENext pipeline parameters:"
+log.info "Alleleexpression pipeline parameters:"
 params.each { k, v -> log.info "  --${k}=${v}" }
 
 // Check input parameters
@@ -60,7 +60,7 @@ multiqc_options.args = params.multiqc_title ? "--title \"${params.multiqc_title}
 ========================================================================================
 */
 
-include { ASENEXT } from './workflows/asenext'
+include { alleleexpression } from './workflows/alleleexpression'
 
 /*
 ========================================================================================
@@ -73,14 +73,14 @@ def multiqc_report = []
 
 workflow {
     // Run main workflow
-    ASENEXT (
+    alleleexpression (
         ch_input,
         ch_multiqc_config,
         ch_multiqc_custom_config
     )
     
     // Set output channels
-    multiqc_report = ASENEXT.out.multiqc_report
+    multiqc_report = alleleexpression.out.multiqc_report
 }
 
 /*

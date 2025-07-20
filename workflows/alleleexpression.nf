@@ -2,9 +2,9 @@
 
 /*
 ========================================================================================
-    ASENext Workflow
+    Alleleexpression Workflow
 ========================================================================================
-    Main workflow for ASENext pipeline
+    Main workflow for Alleleexpression pipeline
 ----------------------------------------------------------------------------------------
 */
 
@@ -187,22 +187,36 @@ main:
     )
     ch_versions = ch_versions.mix(EXTRACT_ASE_GENES.out.versions)
 
-    // FIXED: MultiQC with proper channel handling
+    // Collect all QC reports for MultiQC
     ch_multiqc_files = Channel.empty()
-        .mix(FASTQC.out.zip.collect{it[1]})
+
+    // Add FastQC files
+    ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.map{it[1]})
+
+    // Add STAR log files
+    ch_multiqc_files = ch_multiqc_files.mix(STAR_ALIGN_WASP.out.log_final.map{it[1]})
+
+    // Add UMI-tools log files
+    ch_multiqc_files = ch_multiqc_files.mix(UMITOOLS_DEDUP.out.log.map{it[1]})
+
+    // Debug: Print files being collected
+    ch_multiqc_files
         .collect()
+        .view { files -> "MultiQC input files: ${files}" }
+        .set { ch_collected_files }
+
+    // Run MultiQC only if we have files
+    ch_collected_files
+        .filter { files -> files.size() > 0 }
+        .set { ch_multiqc_ready }
 
     MULTIQC (
-        ch_multiqc_files,
-        ch_multiqc_config.ifEmpty([]),
-        ch_multiqc_custom_config.ifEmpty([]),
-        Channel.empty(),  // multiqc_logo
-        Channel.empty(),  // replace_names
-        Channel.empty()   // sample_names
+        ch_multiqc_ready,                     // multiqc_files
+        ch_multiqc_config.toList(),           // multiqc_config
+        ch_multiqc_custom_config.toList(),    // extra_multiqc_config
+        [],                                   // multiqc_logo (empty)
+        [],                                   // replace_names (empty)
+        []                                    // sample_names (empty)
     )
     ch_versions = ch_versions.mix(MULTIQC.out.versions)
-
-    emit:
-    multiqc_report = MULTIQC.out.report.toList()
-    versions       = ch_versions.ifEmpty(null)
 }
